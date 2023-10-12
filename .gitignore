@@ -1,0 +1,6 @@
+/.vscode/
+/_build/
+/FBuild
+/fbuild.*.fdb
+/__MACOSX/
+.DS_Store

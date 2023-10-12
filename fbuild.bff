@@ -1,0 +1,28 @@
+ObjectList('Objects')
+{
+	.Compiler = '/usr/bin/clang++'
+	.CompilerOptions = '-c "%1" -o "%2"'
+	.CompilerInputPath = 'source/'
+	.CompilerOutputPath = '_build/Xcode/intermediate/'
+}
+
+Executable('Executable')
+{
+	.Linker = '/usr/bin/clang++'
+	.LinkerOptions = '"%1" -o "%2"'
+	.Libraries = 'Objects'
+	.LinkerOutput = '_build/Xcode/ExampleFASTBuild'
+}
+
+XCodeProject('Project')
+{
+	.ProjectInputPaths = 'source/'
+	.ProjectBasePath = 'source/'
+	.ProjectOutput = '_build/Xcode/ExampleFASTBuild.xcodeproj/project.pbxproj'
+	.XCodeBuildWorkingDir = '../../'
+	.ProjectConfigs =
+	[
+		.Config = 'Debug'
+		.Target = 'Executable'
+	]
+}
