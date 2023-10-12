@@ -1,7 +1,7 @@
 ObjectList('Objects')
 {
 	.Compiler = '/usr/bin/clang++'
-	.CompilerOptions = '-c "%1" -o "%2"'
+	.CompilerOptions = '-c "%1" -o "%2" -g -O0'
 	.CompilerInputPath = 'source/'
 	.CompilerOutputPath = '_build/Xcode/intermediate/'
 }
